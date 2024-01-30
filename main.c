@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include <linux/input-event-codes.h>
+#include "str_from_events.h"
+
 
 #define INTERFACE "/dev/input/event0"
 
