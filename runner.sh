@@ -1,0 +1,3 @@
+cd /usr/keyserver/
+
+./server
